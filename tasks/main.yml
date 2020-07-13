@@ -5,6 +5,10 @@
   ios_facts: 
     gather_subset: all
 
+- name: display hostname
+  debug:
+   msg: "Hostname: {{ ansible_net_hostname }}"
+
 - name: display model
   debug:
    msg: "Model: {{ ansible_net_model }}"

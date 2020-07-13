@@ -1,0 +1,11 @@
+---
+# tasks file for show_router_facts
+
+- name: gather facts from IOS device
+  ios_facts: 
+    gather_subset: all
+  register: iosfacts
+
+- name: facts collected
+  debug:
+   msg: "{{ iosfacts }}"

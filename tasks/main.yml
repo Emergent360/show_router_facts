@@ -5,6 +5,14 @@
   ios_facts: 
     gather_subset: all
 
-- name: facts collected
+- name: display model
+  debug:
+   msg: "Model: {{ ansible_net_model }}"
+
+- name: display serial number
+  debug:
+   msg: "Model: {{ ansible_net_serialnum  }}"
+
+- name: template display
   debug:
    msg: "{{ lookup('template', 'template.j2') }}"

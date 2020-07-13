@@ -4,8 +4,7 @@
 - name: gather facts from IOS device
   ios_facts: 
     gather_subset: all
-  register: iosfacts
 
 - name: facts collected
   debug:
-   msg: "{{ iosfacts }}"
+   msg: "{{ lookup('template', 'template.j2') }}"

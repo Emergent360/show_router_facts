@@ -7,24 +7,13 @@
   register: ios_info
   
 
-- name: display hostname
+- name: display device ID
   debug:
    msg:
    - "Hostname: {{ ansible_net_hostname }}"
    - "Model: {{ ansible_net_model }}"
+   - "Serial Num: {{ ansible_net_serialnum  }}"
 
-- name: display model
-  debug:
-   msg: "Model: {{ ansible_net_model }}"
-
-- name: display serial number
-  debug:
-   msg: "Model: {{ ansible_net_serialnum  }}"
-
-- name: template display
-  debug:
-   msg: "{{ lookup('template', 'template.j2') | to_json }}"
-
-- name: output
+- name: display device info
   debug:
     msg: "{{ ios_info }}"

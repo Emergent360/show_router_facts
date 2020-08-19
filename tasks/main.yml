@@ -20,3 +20,7 @@
 - name: template display
   debug:
    msg: "{{ lookup('template', 'template.j2') | to_json }}"
+
+- name: output
+  debug:
+    msg: "{{ ansible_facts }}"

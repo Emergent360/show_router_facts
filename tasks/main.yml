@@ -3,7 +3,7 @@
 
 - name: gather facts from IOS device
   ios_facts: 
-    gather_subset: all
+    gather_subset: min
 
 - name: display hostname
   debug:

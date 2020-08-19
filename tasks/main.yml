@@ -4,10 +4,13 @@
 - name: gather facts from IOS device
   ios_facts: 
     gather_subset: "!config"
+  register: ios_info
+  
 
 - name: display hostname
   debug:
    msg: "Hostname: {{ ansible_net_hostname }}"
+   msg: "Model: {{ ansible_net_model }}"
 
 - name: display model
   debug:
@@ -23,4 +26,4 @@
 
 - name: output
   debug:
-    msg: "{{ ansible_facts }}"
+    msg: "{{ ios_info }}"

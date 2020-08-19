@@ -9,8 +9,9 @@
 
 - name: display hostname
   debug:
-   msg: "Hostname: {{ ansible_net_hostname }}"
-   msg: "Model: {{ ansible_net_model }}"
+   msg:
+   - "Hostname: {{ ansible_net_hostname }}"
+   - "Model: {{ ansible_net_model }}"
 
 - name: display model
   debug:

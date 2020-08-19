@@ -19,4 +19,4 @@
 
 - name: template display
   debug:
-   msg: "{{ lookup('template', 'template.j2') }}"
+   msg: "{{ lookup('template', 'template.j2') | to_json }}"
